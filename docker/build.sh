@@ -38,6 +38,7 @@ case $1 in
     #####################
 
     echo -e "\n${SEP2}\nbuilding aws image...\n"
+    source ./config/base.env
     source ./config/aws.env
 
     BUILD_CMD="docker build \
@@ -63,6 +64,7 @@ case $1 in
     #####################
 
     echo -e "\n${SEP2}\nbuilding gcp image...\n"
+    source ./config/base.env
     source ./config/gcp.env
 
     BUILD_CMD="docker build \
@@ -87,6 +89,7 @@ case $1 in
     #### AZURE IMAGE ####
     #####################
     echo -e "\n${SEP2}\nbuilding azure image...\n"
+    source ./config/base.env
     source ./config/azure.env
 
     BUILD_CMD="docker build \
